@@ -1,0 +1,21 @@
+#  스프링 부트의 경우 별도의 설정이 없으면 메모리 모드로 동작한다.
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:test # 메모리 모드로 동작, db가 꺼져 있어도 테스트가 동작한다.
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: create # create를 자동으로 해줌, application 실행 시점에 지우고 다시 생성 / 기본값:create-drop
+#    properties:
+#      hibernate:
+#        show_sql: true # system.out.print 로 출력
+#        format_sql: true
+
+# 사실 logging 부분도 없어도 된다.
+logging:
+  level:
+    org.hibernate.SQL: debug # sql이 모두 보이게 설정, logger을 통해서 출력
+    org.hibernate.type: trace # 로그에 파라미터를 찍어준다.
