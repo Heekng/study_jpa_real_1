@@ -28,6 +28,7 @@ public class MemberServiceTest {
     @Autowired
     EntityManager em;
 
+
     @Test
 //    @Rollback(value = false)
     public void 회원가입() throws Exception {
