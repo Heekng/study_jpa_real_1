@@ -13,7 +13,7 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) //JOINED: 정규화된, SINGLE_TABLE: 한 테이블에 다 넣은
 @DiscriminatorColumn(name = "dtype") //구분(자), SINGLE_TABLE 이기에 DB입장에서 구분하기 위해 사용
 @Getter
-//@Setter
+@Setter
 public abstract class Item {
 
     @Id
