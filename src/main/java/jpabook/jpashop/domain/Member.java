@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,6 +21,7 @@ public class Member {
 
     private String name;
 
+    @JsonIgnore //제외한다. 하지만 화면에 뿌리는 로직이 엔티티에 추가된다.
     @Embedded //내장타입을 포함했다, 한쪽만 존재해도 된다.
     private Address address;
 
